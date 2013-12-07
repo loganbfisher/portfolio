@@ -1,0 +1,41 @@
+<%= form_for(@project) do |f| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% @project.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.text_field(:name, :placeholder => "What project was this?") %>
+  <%= f.text_field(:description, :placeholder => "Describe the project for us.") %>
+  <%= f.text_field(:employer, :placeholder => "Who was your employer?") %>
+  <%= f.file_field :hero_image %>
+
+  <ul>
+    <% Category.all.each do |category|%>
+    <li>
+      <%= check_box_tag "project[category_ids][]", category.id, f.object.category_ids.include?(category.id), id: "project_category_#{category.id}" %>
+      <%= label_tag "project_category_#{category.id}", category.name, :class => 'na' %>
+    </li>
+    <% end %>
+  </ul>
+
+  <ul>
+    <% Tag.all.each do |tag|%>
+      <li>
+        <%= check_box_tag "project[tag_ids][]", tag.id, f.object.tag_ids.include?(tag.id), id: "project_category_#{tag.id}" %>
+        <%= label_tag "project_tag_#{tag.id}", tag.name, :class => 'na' %>
+      </li>
+    <% end %>
+  </ul>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

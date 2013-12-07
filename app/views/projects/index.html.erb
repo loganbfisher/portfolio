@@ -1,0 +1,46 @@
+<div class="clearfix">
+  <section id="left-column" class="large-4 columns">
+    <div class="profile-overview">
+      <h3>Logan Fisher</h3>
+      <h6>UI Designer / Frontend Developer</h6>
+      <a href="#" data-dropdown="drop2">Bio</a>
+      <ul id="drop2" class="f-dropdown content" data-dropdown-content>
+        <li><p>When I was young I always wanted to be an artist of some sort when I got older.  When college came around I decided to go to the Art Institute of Dallas for 3d art and animation.  After college I got a job working in a 3d media lab producing 3d architectural renderings.</p></li>
+      </ul>
+      <%= image_tag 'profile-image.jpg' %>
+    </div>
+
+  </section>
+  <section id="main-column" class="large-8 columns">
+    <ul id="project-container" class="small-block-grid-1 large-block-grid-3">
+      <% @projects.each do |project| %>
+        <li>
+          <div class="padding">
+            <div class="row">
+              <% if user_signed_in? && current_user.email == 'logan@themediaside.com' %>
+                <%= link_to 'Edit', edit_project_path(project), :class => 'button tiny large-6 columns' %>
+                <%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'button tiny large-6 columns' %>
+              <% end %>
+            </div>
+            <h5><%= project.name %></h5>
+            <h6>Employer: <%= project.employer %></h6>
+            <% project.tags.each do |tag| %>
+              <span class="label"><%= tag.name %></span>
+            <% end %>
+            <div class="project-image-wrapper"><%= image_tag project.hero_image.url(:thumb) %></div>
+            <%= link_to 'Visit project', project, :class => 'secondary tiny button' %>
+            <a href="#" data-dropdown="drop" class="tiny button dropdown">Technologies</a><br>
+            <ul id="drop" data-dropdown-content class="f-dropdown">
+              <% project.categories.each do |category| %>
+                <li><a href="#"><%= category.name %></a></li>
+              <% end %>
+            </ul>
+            <p><%= project.description %></p>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </section>
+</div>
+
+

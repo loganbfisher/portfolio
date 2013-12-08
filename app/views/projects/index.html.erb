@@ -17,10 +17,10 @@
         <li>
           <div class="padding">
             <div class="row">
-              <% if user_signed_in? && current_user.email == 'logan@themediaside.com' %>
+
                 <%= link_to 'Edit', edit_project_path(project), :class => 'button tiny large-6 columns' %>
                 <%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'button tiny large-6 columns' %>
-              <% end %>
+
             </div>
             <h5><%= project.name %></h5>
             <h6>Employer: <%= project.employer %></h6>

@@ -7,7 +7,7 @@
 
 <%= image_tag @project.hero_image.url(:medium) %>
 
-<% if user_signed_in? && current_user.email == 'logan@themediaside.com' %>
+
   <%= link_to 'Edit', edit_project_path(@project) %> |
   <%= link_to 'Back', projects_path %>
-<% end %>
+

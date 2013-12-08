@@ -22,7 +22,7 @@ ul.title-area {
   }
 }
 
-.profile-overview { position: relative; padding-left: 120px; float: left;
+.profile-overview { position: relative; padding-left: 120px; float: left; min-height: 115px;
   h3 { font-weight: 500; }
   img { position: absolute; top: 0; left: 0; z-index: -1; }
 }

@@ -9,6 +9,7 @@ gem 'devise'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'better_errors'
 gem 'mongoid-paperclip', :require => 'mongoid_paperclip'
+gem 'github_api'
 
 
 

@@ -36,6 +36,6 @@ ul.category-form-list, ul.tag-form-list { list-style-type: none;
 
 .all-projects-wrapper { position: fixed; bottom: 0; width: 100%;
   ul.all-projects { list-style-type: none;  background: #333; width: 100%; padding: 10px; margin: 0;
-    li { float: left; }
+    li { float: left; max-height: 100px; overflow: hidden; }
   }
 }

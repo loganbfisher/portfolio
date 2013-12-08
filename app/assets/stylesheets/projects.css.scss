@@ -4,7 +4,7 @@
 
 #left-column { padding: 0; }
 #main-column { background: #e5e5e5; border-left: 1px solid #ccc; }
-.admin.button-group { position: fixed; right: 20px; bottom: 20px; }
+.admin.button-group { position: fixed; left: 20px; top: 20px; }
 ul.title-area {
   li.name {
     img { padding: 8px; }
@@ -32,4 +32,10 @@ ul.title-area {
 
 ul.category-form-list, ul.tag-form-list { list-style-type: none;
   li { float: left; }
+}
+
+.all-projects-wrapper { position: fixed; bottom: 0; width: 100%;
+  ul.all-projects { list-style-type: none;  background: #333; width: 100%; padding: 10px; margin: 0;
+    li { float: left; }
+  }
 }

@@ -29,7 +29,18 @@
             <% project.tags.each do |tag| %>
               <span class="label"><%= tag.name %></span>
             <% end %>
-            <div class="project-image-wrapper"><%= image_tag project.hero_image.url(:thumb) %></div>
+            <div class="project-image-wrapper">
+              <div class="show-for-medium">
+                <%= image_tag project.page_main_image.url(:medium)  %>
+              </div>
+              <div class="show-for-large">
+                <%= image_tag project.hero_image.url(:thumb) %>
+              </div>
+              <div class="show-for-small">
+                <%= image_tag project.hero_image.url(:thumb) %>
+              </div>
+
+            </div>
 
             <sup>Technologies</sup><br>
             <% project.categories.each do |category| %>

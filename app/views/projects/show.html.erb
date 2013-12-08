@@ -29,6 +29,18 @@
   </div>
 </div>
 
+<div class="all-projects-wrapper clearfix">
+  <div class="large-12 columns"><h4>Other projects</h4></div>
+  <ul class="large-12 columns all-projects">
+    <% @projects.each do |project| %>
+      <li class="large-2 columns">
+        <%= image_tag project.hero_image.url(:thumb) %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+
 
 <ul class="admin button-group">
   <% if user_signed_in? && current_user.email == 'logan@themediaside.com' %>

@@ -29,3 +29,7 @@ ul.title-area {
 #project {
  .right-column { padding-top: 50px; }
 }
+
+ul.category-form-list, ul.tag-form-list { list-style-type: none;
+  li { float: left; }
+}

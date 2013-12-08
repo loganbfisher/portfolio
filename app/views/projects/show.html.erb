@@ -1,7 +1,12 @@
 <p id="notice"><%= notice %></p>
 <div id="project" class="large-12 columns">
   <div class="large-8 columns">
-    <%= image_tag @project.page_main_image.url(:medium) %>
+    <div class="show-for-small-only">
+      <%= image_tag @project.hero_image.url(:thumb) %>
+    </div>
+    <div class="hide-for-small-only">
+      <%= image_tag @project.page_main_image.url(:medium) %>
+    </div>
   </div>
   <div class="right-column large-4 columns">
     <h3><%= @project.name %></h3>

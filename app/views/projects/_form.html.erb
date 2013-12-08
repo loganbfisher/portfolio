@@ -1,44 +1,57 @@
-<%= form_for(@project) do |f| %>
-  <% if @project.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+<div class="large-12 columns">
+  <%= form_for(@project) do |f| %>
+    <% if @project.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+        <ul>
+          <% @project.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
 
-      <ul>
-      <% @project.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+    <%= label_tag 'Project Name' %>
+    <%= f.text_field(:name, :placeholder => "What project was this?") %> <br>
+
+    <%= label_tag 'Project Description' %>
+    <%= f.text_area(:description, :placeholder => "Describe the project for us.") %><br>
+
+    <%= label_tag 'Project Employer' %>
+    <%= f.text_field(:employer, :placeholder => "Who was your employer?") %><br>
+
+    <%= label_tag 'Smaller image for projects page' %>
+    <%= f.file_field :hero_image %><br>
+
+    <%= label_tag 'Large image for a individual project page' %>
+    <%= f.file_field :page_main_image %><br>
+
+    <%= label_tag 'Technologies used' %>
+    <div class="panel clearfix">
+      <ul class="category-form-list">
+        <% Category.all.each do |category|%>
+          <li>
+            <%= check_box_tag "project[category_ids][]", category.id, f.object.category_ids.include?(category.id), id: "project_category_#{category.id}" %>
+            <%= label_tag "project_category_#{category.id}", category.name, :class => 'na' %>
+          </li>
+        <% end %>
       </ul>
     </div>
+
+    <%= label_tag 'Project tags' %>
+    <div class="panel clearfix">
+      <ul class="tag-form-list">
+        <% Tag.all.each do |tag|%>
+          <li>
+            <%= check_box_tag "project[tag_ids][]", tag.id, f.object.tag_ids.include?(tag.id), id: "project_category_#{tag.id}" %>
+            <%= label_tag "project_tag_#{tag.id}", tag.name, :class => 'na' %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="actions">
+      <%= f.submit :class => 'button' %>
+    </div>
   <% end %>
-
-  <%= f.text_field(:name, :placeholder => "What project was this?") %>
-  <%= f.text_field(:description, :placeholder => "Describe the project for us.") %>
-  <%= f.text_field(:employer, :placeholder => "Who was your employer?") %>
-  <%= label_tag 'Smaller image for projects page' %>
-  <%= f.file_field :hero_image %>
-  <%= label_tag 'Large image for a individual project page' %>
-  <%= f.file_field :page_main_image %>
-
-  <ul>
-    <% Category.all.each do |category|%>
-    <li>
-      <%= check_box_tag "project[category_ids][]", category.id, f.object.category_ids.include?(category.id), id: "project_category_#{category.id}" %>
-      <%= label_tag "project_category_#{category.id}", category.name, :class => 'na' %>
-    </li>
-    <% end %>
-  </ul>
-
-  <ul>
-    <% Tag.all.each do |tag|%>
-      <li>
-        <%= check_box_tag "project[tag_ids][]", tag.id, f.object.tag_ids.include?(tag.id), id: "project_category_#{tag.id}" %>
-        <%= label_tag "project_tag_#{tag.id}", tag.name, :class => 'na' %>
-      </li>
-    <% end %>
-  </ul>
-
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>

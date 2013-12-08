@@ -16,7 +16,7 @@
   <nav class="top-bar" data-topbar>
     <ul class="title-area">
       <li class="name">
-        <h1><a href="#">loganbfisher.com</a></h1>
+        <h1><%= image_tag 'logo.png' %></h1>
       </li>
     </ul>
 
@@ -26,6 +26,9 @@
         <% if user_signed_in? %>
           <li>
             <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+          </li>
+          <li>
+            <%= link_to('Edit Account', edit_user_registration_path) %>
           </li>
         <% else %>
           <li>

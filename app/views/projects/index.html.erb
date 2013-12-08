@@ -28,14 +28,13 @@
               <span class="label"><%= tag.name %></span>
             <% end %>
             <div class="project-image-wrapper"><%= image_tag project.hero_image.url(:thumb) %></div>
-            <%= link_to 'Visit project', project, :class => 'secondary tiny button' %>
-            <a href="#" data-dropdown="drop" class="tiny button dropdown">Technologies</a><br>
-            <ul id="drop" data-dropdown-content class="f-dropdown">
-              <% project.categories.each do |category| %>
-                <li><a href="#"><%= category.name %></a></li>
-              <% end %>
-            </ul>
+
+            <sup>Technologies</sup><br>
+            <% project.categories.each do |category| %>
+              <span class="label"><%= category.name %></span>
+            <% end %>
             <p><%= project.description %></p>
+            <%= link_to 'Visit project', project, :class => 'secondary tiny button' %>
           </div>
         </li>
       <% end %>

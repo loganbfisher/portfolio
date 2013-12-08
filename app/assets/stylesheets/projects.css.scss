@@ -4,6 +4,7 @@
 
 #left-column { padding: 0; }
 #main-column { background: #e5e5e5; border-left: 1px solid #ccc; }
+.admin.button-group { position: fixed; right: 20px; bottom: 20px; }
 ul.title-area {
   li.name {
     img { padding: 8px; }
@@ -23,4 +24,8 @@ ul.title-area {
 .profile-overview { position: relative; padding-left: 120px; float: left;
   h3 { font-weight: 500; }
   img { position: absolute; top: 0; left: 0; z-index: -1; }
+}
+
+#project {
+ .right-column { padding-top: 50px; }
 }

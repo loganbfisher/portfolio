@@ -14,7 +14,10 @@
   <%= f.text_field(:name, :placeholder => "What project was this?") %>
   <%= f.text_field(:description, :placeholder => "Describe the project for us.") %>
   <%= f.text_field(:employer, :placeholder => "Who was your employer?") %>
+  <%= label_tag 'Smaller image for projects page' %>
   <%= f.file_field :hero_image %>
+  <%= label_tag 'Large image for a individual project page' %>
+  <%= f.file_field :page_main_image %>
 
   <ul>
     <% Category.all.each do |category|%>

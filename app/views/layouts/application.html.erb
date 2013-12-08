@@ -12,16 +12,11 @@
   <body>
   <% if yield(:title) == 'My Projects' %>
     <nav class="top-bar" data-topbar>
-      <ul class="title-area">
-        <li class="name">
-          <h1><%= link_to(image_tag('logo.png'), projects_path) %></h1>
-        </li>
-      </ul>
-
       <section class="top-bar-section">
         <!-- Right Nav Section -->
         <ul class="right">
           <% if user_signed_in? %>
+            <li><%= link_to(image_tag('logo.png'), projects_path) %></li>
             <li>
               <%= link_to('New Project', new_project_path) %>
             </li>

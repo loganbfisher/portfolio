@@ -5,6 +5,7 @@
 #left-column { padding: 0; }
 #main-column { background: #e5e5e5; border-left: 1px solid #ccc; }
 .admin.button-group { position: fixed; left: 20px; top: 20px; }
+.top-bar { position: fixed; right: 20px; top: 20px; background-color: rgba(0, 0, 0, 0.8); background: rgba(0, 0, 0, 0.8); color: rgba(0, 0, 0, 0.8); z-index: 999; }
 ul.title-area {
   li.name {
     img { padding: 8px; }

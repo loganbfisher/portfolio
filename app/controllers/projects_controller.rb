@@ -3,6 +3,7 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     @projects = Project.all
+    @user = User.where(:email => 'logan@themediaside.com').first
 
     respond_to do |format|
       format.html # index.html.erb

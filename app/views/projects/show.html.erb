@@ -22,13 +22,13 @@
     <% @project.tags.each do |tag| %>
       <span class="label"><%= tag.name %></span>
     <% end %>
-    <div class="large-4 columns large-centered">
+    <div class="large-4 small-4 columns small-centered large-centered">
       <%= image_tag('background-logo.jpg')%>
     </div>
   </div>
 </div>
 
-<div class="all-projects-wrapper clearfix">
+<div class="all-projects-wrapper hide-for-small clearfix">
   <div class="large-12 columns"><h4>Other projects</h4></div>
   <ul class="large-12 columns all-projects">
     <% @projects.each do |project| %>
@@ -43,7 +43,7 @@
 
 <ul class="admin button-group">
   <% if user_signed_in? && current_user.email == 'logan@themediaside.com' %>
-    <li><%= link_to 'Edit', edit_project_path(@project), :class => 'button tiny' %></li>
+    <li class="large-6 small-6 columns"><%= link_to 'Edit', edit_project_path(@project), :class => 'button tiny small-12 columns' %></li>
   <% end %>
-  <li><%= link_to 'Back', projects_path, :class => 'button tiny' %></li>
+  <li class="large-6 small-6 columns"><%= link_to 'Back', projects_path, :class => 'button tiny small-12 columns' %></li>
 </ul>

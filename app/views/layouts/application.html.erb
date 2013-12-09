@@ -10,7 +10,7 @@
   </head>
 
   <body>
-  <% if yield(:title) == 'My Projects' %>
+  <% if yield(:title) == 'My Projects' && user_signed_in? %>
     <nav class="top-bar" data-topbar>
       <section class="top-bar-section">
         <!-- Right Nav Section -->
@@ -31,7 +31,61 @@
       </section>
     </nav>
   <% end %>
-  <%= yield %>
+
+  <div class="off-canvas-wrap">
+    <div class="inner-wrap">
+      <nav class="tab-bar show-for-medium-down">
+        <section class="left-small"><a class="left-off-canvas-toggle" ><%= image_tag 'profile-image.jpg' %></a></section>
+        <section class="right tab-bar-section"><a href="#" class="left-off-canvas-toggle"><h6 class="left">About me</h6></a></section>
+      </nav>
+
+
+      <!-- Off Canvas Menu -->
+      <aside class="left-off-canvas-menu show-for-medium-down">
+        <!-- whatever you want goes here -->
+        <ul class="off-canvas-list">
+          <li>
+            <div class="profile-overview clearfix">
+              <div class="small-3 columns">
+                <%= image_tag 'profile-image.jpg' %>
+              </div>
+              <div class="small-9 columns">
+                <h3>Logan Fisher</h3>
+                <h6>UI Designer / Frontend Developer</h6>
+                <a href="#" data-dropdown="drop2">Bio</a>
+                <ul id="drop2" class="f-dropdown content" data-dropdown-content>
+                  <li><p><%= @user.bio %></p></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="large-12 columns">
+              <h4>Professional Goal</h4>
+              <p>To obtain a position with a progressive web development company with a strong focus on creativity and problem solving. To find a position that is challenging, rewarding and provides an opportunity to expand my knowledge and abilities in creating client centric solutions.</p>
+              <h4>Specialties</h4>
+              <ul>
+                <li><strong>Responsive Design & Development</strong></li>
+                <li><strong>Ruby on Rails Frontend and Backend Development</strong></li>
+                <li><strong>HTML5, CSS3 and Javascript Development</strong></li>
+                <li><strong>Project Management</strong></li>
+                <li><strong>SEO and Analytics</strong></li>
+                <li><strong>Social Networking Integration</strong></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- main content goes here -->
+      <%= yield %>
+      <!-- close the off-canvas menu -->
+      <a class="exit-off-canvas"></a>
+
+    </div>
+  </div>
+
+
   <%= javascript_include_tag "application" %>
   </body>
 </html>

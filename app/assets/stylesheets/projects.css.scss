@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #left-column { padding: 0; }
-#main-column { background: #e5e5e5; border-left: 1px solid #ccc; }
+#main-column { background: url('dark_geometric.png') repeat 0 0; border-left: 1px solid #ccc; }
 .admin.button-group { position: fixed; left: 20px; top: 20px; }
 .top-bar { position: fixed; right: 20px; top: 20px; background-color: rgba(0, 0, 0, 0.8); background: rgba(0, 0, 0, 0.8); color: rgba(0, 0, 0, 0.8); z-index: 999; }
 ul.title-area {
@@ -13,18 +13,19 @@ ul.title-area {
 }
 #project-container {
   li { margin-top: 15px;
-    .padding { padding: 5px; background: #ffffff; border: 1px solid #ccc;
+    .padding { padding: 5px; background: #ffffff; border: 1px solid #000;
       p { font-size: 12px; color: #333; }
       h5 { font-weight: 500; border-bottom: 1px solid #cccccc; }
 
-      .project-image-wrapper { padding: 10px 0; }
+      .project-image-wrapper { padding: 10px 0 0; }
     }
   }
 }
 
-.profile-overview { position: relative; padding-left: 120px; float: left; min-height: 115px;
+.profile-overview { position: relative; border-bottom: 1px solid #ccc; width: 100%; background: #e5e5e5;
+  .small-3 { padding: 0; }
   h3 { font-weight: 500; }
-  img { position: absolute; top: 0; left: 0; z-index: -1; }
+  img { border: 1px solid #ccc; border-bottom: 0; border-top: 0; }
 }
 
 #project {
@@ -40,3 +41,15 @@ ul.category-form-list, ul.tag-form-list { list-style-type: none;
     li { float: left; max-height: 100px; overflow: hidden; }
   }
 }
+
+
+@media only screen and (max-width: 40em) {
+  #project {
+    .right-column { padding-top: 10px; }
+  }
+
+  .admin.button-group { position: fixed; left: auto; top: auto; bottom: 0; width: 100%; padding: 10px 0 !important; background: #333;
+    .button { margin: 0; }
+  }
+} /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+

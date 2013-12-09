@@ -16,6 +16,7 @@ class ProjectsController < ApplicationController
   def show
     @project = Project.find(params[:id])
     @projects = Project.all
+    @user = User.where(:email => 'logan@themediaside.com').first
 
     respond_to do |format|
       format.html # show.html.erb
@@ -27,6 +28,7 @@ class ProjectsController < ApplicationController
   # GET /projects/new.json
   def new
     @project = Project.new
+    @user = User.where(:email => 'logan@themediaside.com').first
 
     respond_to do |format|
       format.html # new.html.erb
@@ -37,6 +39,7 @@ class ProjectsController < ApplicationController
   # GET /projects/1/edit
   def edit
     @project = Project.find(params[:id])
+    @user = User.where(:email => 'logan@themediaside.com').first
   end
 
   # POST /projects
@@ -44,6 +47,7 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(params[:project])
     @category = Category.new(params[:category])
+    @user = User.where(:email => 'logan@themediaside.com').first
 
     respond_to do |format|
       if @project.save
@@ -60,6 +64,7 @@ class ProjectsController < ApplicationController
   # PUT /projects/1.json
   def update
     @project = Project.find(params[:id])
+    @user = User.where(:email => 'logan@themediaside.com').first
 
     respond_to do |format|
       if @project.update_attributes(params[:project])

@@ -1,16 +1,19 @@
 <% title 'My Projects' %>
 
 <div class="clearfix">
-  <section id="left-column" class="large-4 columns">
-    <div class="profile-overview">
-      <h3>Logan Fisher</h3>
-      <h6>UI Designer / Frontend Developer</h6>
-      <a href="#" data-dropdown="drop2">Bio</a>
-      <ul id="drop2" class="f-dropdown content" data-dropdown-content>
-        <li><p><%= @user.bio %></p></li>
-      </ul>
-      <%= image_tag 'profile-image.jpg' %>
-
+  <section id="left-column" class="large-4 hide-for-medium-down columns">
+    <div class="profile-overview clearfix">
+      <div class="small-3 columns">
+        <%= image_tag 'profile-image.jpg' %>
+      </div>
+      <div class="small-9 columns">
+        <h3>Logan Fisher</h3>
+        <h6>UI Designer / Frontend Developer</h6>
+        <a href="#" data-dropdown="drop2">Bio</a>
+        <ul id="drop2" class="f-dropdown content" data-dropdown-content>
+          <li><p><%= @user.bio %></p></li>
+        </ul>
+      </div>
     </div>
     <div class="large-12 columns">
       <h4>Professional Goal</h4>
@@ -27,7 +30,7 @@
     </div>
 
   </section>
-  <section id="main-column" class="large-8 columns">
+  <section id="main-column" class="large-8 small-12 columns">
     <ul id="project-container" class="small-block-grid-1 large-block-grid-3">
       <% @projects.each do |project| %>
         <li>
@@ -38,30 +41,21 @@
                 <%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'button tiny large-6 columns' %>
               <% end %>
             </div>
-            <h5><%= project.name %></h5>
-            <h6>Employer: <%= project.employer %></h6>
+            <h4><%= project.name %></h4>
+            <div class="project-image-wrapper">
+              <div class="show-for-medium">
+                <%= link_to(image_tag(project.page_main_image.url(:medium)), project)  %>
+              </div>
+              <div class="show-for-large-up">
+                <%= link_to(image_tag(project.hero_image.url(:thumb)), project) %>
+              </div>
+              <div class="show-for-small">
+                <%= link_to(image_tag(project.hero_image.url(:thumb)), project) %>
+              </div>
+            </div>
             <% project.tags.each do |tag| %>
               <span class="label"><%= tag.name %></span>
             <% end %>
-            <div class="project-image-wrapper">
-              <div class="show-for-medium">
-                <%= image_tag project.page_main_image.url(:medium)  %>
-              </div>
-              <div class="show-for-large">
-                <%= image_tag project.hero_image.url(:thumb) %>
-              </div>
-              <div class="show-for-small">
-                <%= image_tag project.hero_image.url(:thumb) %>
-              </div>
-
-            </div>
-
-            <sup>Technologies</sup><br>
-            <% project.categories.each do |category| %>
-              <span class="label"><%= category.name %></span>
-            <% end %>
-            <p><%= project.description %></p>
-            <%= link_to 'Visit project', project, :class => 'secondary tiny button' %>
           </div>
         </li>
       <% end %>

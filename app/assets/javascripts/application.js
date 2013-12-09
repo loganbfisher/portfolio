@@ -15,7 +15,7 @@
 //= require foundation
 //= require_tree .
 //= require_self
-$(function(){ $(document).foundation(); });
+$(document).foundation();
 
 var random_color = function get_random_color() {
     var letters = '0123456789ABCDEF'.split('');

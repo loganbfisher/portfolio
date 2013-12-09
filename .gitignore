@@ -1,8 +1,7 @@
 # Ignore Aptana Project File #
-.idea
+/.idea
 
 # Ignore Compiled Site #
-project/assets/*
-log/development.log
-tmp
+development.log
+/tmp
 .DS_Store

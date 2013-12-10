@@ -3,8 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #left-column { padding: 0; }
-#main-column { background: url('dark_geometric.png') repeat 0 0; border-left: 1px solid #ccc; }
+#main-column { background: url('dark_geometric.png') repeat 0 0; }
 .admin.button-group { position: fixed; left: 20px; top: 20px; }
+.left-small {
+  a { float: left; padding: 5px;
+    img { float: left; }
+  }
+}
 .top-bar { position: fixed; right: 20px; top: 20px; background-color: rgba(0, 0, 0, 0.8); background: rgba(0, 0, 0, 0.8); color: rgba(0, 0, 0, 0.8); z-index: 999; }
 ul.title-area {
   li.name {
@@ -12,8 +17,8 @@ ul.title-area {
   }
 }
 #container {
-  .item { width: 33.2%; margin-top: 15px;
-    .padding { padding: 10px;
+  .item { width: 33.2%;
+    .padding { padding: 10px 10px 5px 10px;
       p { font-size: 12px; color: #333; }
       h5 { font-weight: 500; border-bottom: 1px solid #cccccc; }
     }
@@ -50,6 +55,12 @@ ul.category-form-list, ul.tag-form-list { list-style-type: none;
   }
   #container {
     .item { width: 100%; }
+  }
+
+  .left-small {
+    a { float: left; padding: 0px;
+      img { float: left; }
+    }
   }
 
   .admin.button-group { position: fixed; left: auto; top: auto; bottom: 0; width: 100%; padding: 10px 0 !important; background: #333;

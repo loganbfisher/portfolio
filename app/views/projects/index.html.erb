@@ -30,7 +30,6 @@
     </div>
   </section>
   <section id="main-column" class="large-8 small-12 columns">
-
     <div id="container">
       <% @projects.each do |project| %>
       <div class="item">
@@ -52,9 +51,12 @@
               <%= link_to(image_tag(project.hero_image.url(:thumb)), project) %>
             </div>
           </div>
-          <% project.tags.each do |tag| %>
-            <span class="label"><%= tag.name %></span>
-          <% end %>
+          <div class="description clearfix">
+            <p class="left"><%= project.name %></p>
+            <% project.tags.each do |tag| %>
+              <span class="label right"><%= tag.name %></span>
+            <% end %>
+          </div>
         </div>
       </div>
       <% end %>

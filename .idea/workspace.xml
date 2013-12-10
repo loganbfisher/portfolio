@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdbabc28-e708-4f15-a5eb-eb918892b7bf" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/javascripts/masonry.pkgd.min.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/projects/hero_images/52a3/e711/bd02/8692/2c00/0005/medium/2013-12-02_1929.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/projects/hero_images/52a3/e711/bd02/8692/2c00/0005/original/2013-12-02_1929.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/projects/hero_images/52a3/e711/bd02/8692/2c00/0005/thumb/2013-12-02_1929.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/system/projects/hero_images/52a3/e711/bd02/8692/2c00/0005/top/2013-12-02_1929.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/projects/index.html.erb" afterPath="$PROJECT_DIR$/app/views/projects/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/portfolio.iml" afterPath="$PROJECT_DIR$/.idea/portfolio.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/project.rb" afterPath="$PROJECT_DIR$/app/models/project.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/projects.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/projects.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -21,11 +19,11 @@
     <file path="/Gemfile" changelist="cdbabc28-e708-4f15-a5eb-eb918892b7bf" time="1386618074855" ignored="false" />
     <file path="/application.js" changelist="cdbabc28-e708-4f15-a5eb-eb918892b7bf" time="1386527472112" ignored="false" />
     <file path="/application.html.erb" changelist="cdbabc28-e708-4f15-a5eb-eb918892b7bf" time="1386614693614" ignored="false" />
-    <file path="/index.html.erb" changelist="cdbabc28-e708-4f15-a5eb-eb918892b7bf" time="1386617732223" ignored="false" />
+    <file path="/index.html.erb" changelist="cdbabc28-e708-4f15-a5eb-eb918892b7bf" time="1386642615305" ignored="false" />
     <file path="/project.rb" changelist="cdbabc28-e708-4f15-a5eb-eb918892b7bf" time="1386475656676" ignored="false" />
     <file path="/show.html.erb" changelist="cdbabc28-e708-4f15-a5eb-eb918892b7bf" time="1386616431099" ignored="false" />
     <file path="/_form.html.erb" changelist="cdbabc28-e708-4f15-a5eb-eb918892b7bf" time="1386516146539" ignored="false" />
-    <file path="/projects.css.scss" changelist="cdbabc28-e708-4f15-a5eb-eb918892b7bf" time="1386640820180" ignored="false" />
+    <file path="/projects.css.scss" changelist="cdbabc28-e708-4f15-a5eb-eb918892b7bf" time="1386643522201" ignored="false" />
     <file path="/edit.html.erb" changelist="cdbabc28-e708-4f15-a5eb-eb918892b7bf" time="1386541525277" ignored="false" />
     <file path="/application_helper.rb" changelist="cdbabc28-e708-4f15-a5eb-eb918892b7bf" time="1386517218465" ignored="false" />
     <file path="/new.html.erb" changelist="cdbabc28-e708-4f15-a5eb-eb918892b7bf" time="1386517808148" ignored="false" />
@@ -84,16 +82,16 @@
       <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="105" selection-start="1423" selection-end="1423" vertical-scroll-proportion="-5.9583335">
+            <state line="38" column="105" selection-start="1423" selection-end="1423" vertical-scroll-proportion="-21.25">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="projects.css.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="projects.css.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/projects.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="17" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0">
+            <state line="51" column="4" selection-start="1619" selection-end="1641" vertical-scroll-proportion="0.68085104">
               <folding />
             </state>
           </provider>
@@ -108,10 +106,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="22" selection-start="1119" selection-end="1119" vertical-scroll-proportion="0.49393415">
+            <state line="34" column="20" selection-start="1096" selection-end="1096" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -140,7 +138,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/projects/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="10" selection-start="2650" selection-end="2650" vertical-scroll-proportion="-20.0">
+            <state line="62" column="10" selection-start="2775" selection-end="2775" vertical-scroll-proportion="-27.5">
               <folding />
             </state>
           </provider>
@@ -186,9 +184,9 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/models/project.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/views/projects/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/projects.css.scss" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
       </list>
     </option>
   </component>
@@ -942,13 +940,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="105" selection-start="1423" selection-end="1423" vertical-scroll-proportion="-5.9583335">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/projects_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="66" column="64" selection-start="1816" selection-end="1816" vertical-scroll-proportion="0.0">
@@ -970,13 +961,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/projects/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="10" selection-start="2650" selection-end="2650" vertical-scroll-proportion="-20.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/project.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="96" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
@@ -984,16 +968,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/projects.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="17" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0">
+        <state line="38" column="105" selection-start="1423" selection-end="1423" vertical-scroll-proportion="-21.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/projects/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="10" selection-start="2775" selection-end="2775" vertical-scroll-proportion="-27.5">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="22" selection-start="1119" selection-end="1119" vertical-scroll-proportion="0.49393415">
+        <state line="34" column="20" selection-start="1096" selection-end="1096" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/projects.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="4" selection-start="1619" selection-end="1641" vertical-scroll-proportion="0.68085104">
           <folding />
         </state>
       </provider>

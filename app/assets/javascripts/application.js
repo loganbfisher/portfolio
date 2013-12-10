@@ -33,6 +33,5 @@ $('span.label').each(function(){
 var $container = $('#container');
 // initialize
 $container.masonry({
-    columnWidth: 102.5,
     itemSelector: '.item'
 });

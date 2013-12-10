@@ -2,6 +2,6 @@
 /.idea
 
 # Ignore Compiled Site #
-development.log
+/log/development.log
 /tmp
 .DS_Store

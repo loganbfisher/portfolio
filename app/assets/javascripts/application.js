@@ -29,3 +29,10 @@ var random_color = function get_random_color() {
 $('span.label').each(function(){
     $(this).css('background', random_color);
 });
+
+var $container = $('#container');
+// initialize
+$container.masonry({
+    columnWidth: 102.5,
+    itemSelector: '.item'
+});

@@ -28,38 +28,37 @@
         <li><strong>Social Networking Integration</strong></li>
       </ul>
     </div>
-
   </section>
   <section id="main-column" class="large-8 small-12 columns">
-    <ul id="project-container" class="small-block-grid-1 large-block-grid-3">
+
+    <div id="container">
       <% @projects.each do |project| %>
-        <li>
-          <div class="padding">
-            <div class="row">
-              <% if user_signed_in? && current_user.email == 'logan@themediaside.com' %>
-                <%= link_to 'Edit', edit_project_path(project), :class => 'button tiny large-6 columns' %>
-                <%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'button tiny large-6 columns' %>
-              <% end %>
-            </div>
-            <h4><%= project.name %></h4>
-            <div class="project-image-wrapper">
-              <div class="show-for-medium">
-                <%= link_to(image_tag(project.page_main_image.url(:medium)), project)  %>
-              </div>
-              <div class="show-for-large-up">
-                <%= link_to(image_tag(project.hero_image.url(:thumb)), project) %>
-              </div>
-              <div class="show-for-small">
-                <%= link_to(image_tag(project.hero_image.url(:thumb)), project) %>
-              </div>
-            </div>
-            <% project.tags.each do |tag| %>
-              <span class="label"><%= tag.name %></span>
+      <div class="item">
+        <div class="padding">
+          <div class="row">
+            <% if user_signed_in? && current_user.email == 'logan@themediaside.com' %>
+              <%= link_to 'Edit', edit_project_path(project), :class => 'button tiny large-6 columns' %>
+              <%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'button tiny large-6 columns' %>
             <% end %>
           </div>
-        </li>
+          <div class="project-image-wrapper">
+            <div class="show-for-medium">
+              <%= link_to(image_tag(project.page_main_image.url(:medium)), project)  %>
+            </div>
+            <div class="show-for-large-up">
+              <%= link_to(image_tag(project.hero_image.url(:thumb)), project) %>
+            </div>
+            <div class="show-for-small">
+              <%= link_to(image_tag(project.hero_image.url(:thumb)), project) %>
+            </div>
+          </div>
+          <% project.tags.each do |tag| %>
+            <span class="label"><%= tag.name %></span>
+          <% end %>
+        </div>
+      </div>
       <% end %>
-    </ul>
+    </div>
   </section>
 </div>
 

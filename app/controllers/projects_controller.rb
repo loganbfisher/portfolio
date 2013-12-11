@@ -2,7 +2,8 @@ class ProjectsController < ApplicationController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    @projects = Project.all()
+    @tags = Tag.all
     @user = User.where(:email => 'logan@themediaside.com').first
 
     respond_to do |format|

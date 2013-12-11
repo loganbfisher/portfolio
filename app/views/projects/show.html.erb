@@ -28,19 +28,6 @@
   </div>
 </div>
 
-<div class="all-projects-wrapper hide-for-small clearfix">
-  <div class="large-12 columns"><h4>Other projects</h4></div>
-  <ul class="large-12 columns all-projects">
-    <% @projects.each do |project| %>
-      <li class="large-2 columns">
-        <%= link_to( image_tag(project.hero_image.url(:thumb)), project) %>
-      </li>
-    <% end %>
-  </ul>
-</div>
-
-
-
 <ul class="admin button-group">
   <% if user_signed_in? && current_user.email == 'logan@themediaside.com' %>
     <li class="large-6 small-6 columns"><%= link_to 'Edit', edit_project_path(@project), :class => 'button tiny small-12 columns' %></li>

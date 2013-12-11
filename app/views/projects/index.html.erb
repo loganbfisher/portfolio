@@ -29,6 +29,12 @@
       </ul>
     </div>
   </section>
+  <section id="filter-wrapper" class="large-8 small-12 columns">
+    <% @tags.each do |tag| %>
+      <input type="radio" name="fields" value="<%= tag.name %>" id="<%= tag.name %>">
+      <label for="<%= tag.name %>"><%= tag.name %></label>
+    <% end %>
+  </section>
   <section id="main-column" class="large-8 small-12 columns">
     <div id="container">
       <% @projects.each do |project| %>
@@ -54,7 +60,7 @@
           <div class="description clearfix">
             <p class="left"><%= project.name %></p>
             <% project.tags.each do |tag| %>
-              <span class="label right"><%= tag.name %></span>
+              <span class="label right" data="<%= tag.name %>"><%= tag.name %></span>
             <% end %>
           </div>
         </div>

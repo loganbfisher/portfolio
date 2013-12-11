@@ -3,12 +3,19 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #left-column { padding: 0; }
-#main-column { background: url('dark_geometric.png') repeat 0 0; }
+#main-column { background: url('dark_geometric.png') repeat 0 0;
+
+}
+#filter-wrapper { background: #ccc; padding: 10px;
+  input { margin: 0; }
+}
 .admin.button-group { position: fixed; left: 20px; top: 20px; }
 .left-small {
   a { float: left; padding: 5px;
     img { float: left; }
   }
+
+
 }
 .top-bar { position: fixed; right: 20px; top: 20px; background-color: rgba(0, 0, 0, 0.8); background: rgba(0, 0, 0, 0.8); color: rgba(0, 0, 0, 0.8); z-index: 999; }
 ul.title-area {

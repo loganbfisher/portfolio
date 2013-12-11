@@ -30,8 +30,27 @@ $('span.label').each(function(){
     $(this).css('background', random_color);
 });
 
-var $container = $('#container');
+$(document).ready(function(){
+    var $container = $('#container');
 // initialize
-$container.masonry({
-    itemSelector: '.item'
+    $container.masonry({
+        itemSelector: '.item'
+    });
+});
+
+
+$('input[type="radio"]').on('click', function(){
+    var inputValue = $(this).attr('value');
+    var spanTag = $('span.label');
+
+    spanTag.each(function(i){
+        if(inputValue == $(this).attr('data')) {
+          $(this).closest('.item').prependTo('#container');
+        }
+    });
+
+    var msnry = new Masonry( '#container');
+
+    msnry.reloadItems()
+
 });

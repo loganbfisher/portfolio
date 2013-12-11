@@ -30,14 +30,12 @@ $('span.label').each(function(){
     $(this).css('background', random_color);
 });
 
-$(document).ready(function(){
-    var $container = $('#container');
-// initialize
-    $container.masonry({
-        itemSelector: '.item'
-    });
+// or with jQuery
+var $container = $('#container');
+// initialize Masonry after all images have loaded
+$container.imagesLoaded( function() {
+    $container.masonry();
 });
-
 
 $('input[type="radio"]').on('click', function(){
     var inputValue = $(this).attr('value');

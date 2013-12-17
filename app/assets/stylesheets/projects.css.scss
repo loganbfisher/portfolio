@@ -3,11 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #left-column { padding: 0; }
-#main-column { background: url('dark_geometric.png') repeat 0 0;
+#main-column { background: url('dark_geometric.png') repeat 0 0; }
 
-}
-#filter-wrapper { background: #ccc; padding: 10px;
+#filter-wrapper { background: #000; padding: 10px;
   input { margin: 0; }
+  label { color: #fff; }
+  span { color: #666; margin-right: 10px;}
 }
 .admin.button-group { position: fixed; left: 20px; top: 20px; }
 .left-small {

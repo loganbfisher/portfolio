@@ -9,10 +9,7 @@
       <div class="small-9 columns">
         <h3>Logan Fisher</h3>
         <h6>UI Designer / Frontend Developer</h6>
-        <a href="#" data-dropdown="drop2">Bio</a>
-        <ul id="drop2" class="f-dropdown content" data-dropdown-content>
-          <li><p><%= @user.bio %></p></li>
-        </ul>
+        <a href="http://www.excelmedialabs.com/resume_2013.pdf">View my resume</a>
       </div>
     </div>
     <div class="large-12 columns">
@@ -24,12 +21,19 @@
         <li><strong>Ruby on Rails Frontend and Backend Development</strong></li>
         <li><strong>HTML5, CSS3 and Javascript Development</strong></li>
         <li><strong>Project Management</strong></li>
-        <li><strong>SEO and Analytics</strong></li>
-        <li><strong>Social Networking Integration</strong></li>
+        <li><strong>Agile (Sprint Cycle) Workflow</strong></li>
+      </ul>
+      <h4>Currently Interested In</h4>
+      <ul>
+        <li><strong>Node Js</strong></li>
+        <li><strong>Ruby on Rails</strong></li>
+        <li><strong>Sails Js</strong></li>
+        <li><strong>Mongodb</strong></li>
       </ul>
     </div>
   </section>
   <section id="filter-wrapper" class="large-8 small-12 columns">
+    <span>Sort by  </span>
     <% @tags.each do |tag| %>
       <input type="radio" name="fields" value="<%= tag.name %>" id="<%= tag.name %>">
       <label for="<%= tag.name %>"><%= tag.name %></label>

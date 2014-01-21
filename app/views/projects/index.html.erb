@@ -8,9 +8,10 @@
       </div>
       <div class="small-9 columns">
         <h3>Logan Fisher</h3>
-        <h6>UI Designer /ccc Frontend Developer</h6>
-        <% ab_test("resume_text", "Vdfdsiew my resume", "resume") do |button_file| %>
+        <h6>UI Designer / Frontend Developer</h6>
+        <% ab_test("resume_text", "View my resume", "resume") do |button_file| %>
             <a href="http://www.excelmedialabs.com/resume_2013.pdf"><%= button_file %></a>
+            <% finished('button_file') %>
         <% end %>
       </div>
     </div>

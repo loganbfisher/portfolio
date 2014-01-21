@@ -10,6 +10,7 @@ gem 'devise'
 gem 'better_errors'
 gem 'mongoid-paperclip', :require => 'mongoid_paperclip'
 gem 'github_api'
+gem 'split', :require => 'split/dashboard'
 
 
 

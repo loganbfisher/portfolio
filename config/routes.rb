@@ -3,6 +3,7 @@ Portfolio::Application.routes.draw do
   devise_for :users
 
   resources :projects
+  mount Split::Dashboard, :at => 'split'
 
 
   root :to => "projects#index"
